@@ -358,7 +358,7 @@ h1 {
     position: relative;    
     z-index: 1;
     margin: 0 0 auto auto;
-    transition: 0.5s linear;
+    transition: 0.2s linear;
 }
 .kard__main img {
     height: 17vh;
@@ -392,7 +392,7 @@ h1 {
     border-radius: 36px;  
     top: -300px; 
     left: 39px;
-    transition: 0.5s linear;
+    transition: 0.2s linear;
     z-index: 0;       
 }
 .kard__decor img {
@@ -441,12 +441,16 @@ h1 {
     list-style: none; 
     margin-top: 7.5vh;   
     border-radius: 24px; 
-    transition: 0.2s linear; 
-    filter: drop-shadow(0px 100px 80px rgba(0, 0, 0, 0.02)) drop-shadow(0px 64.8148px 46.8519px rgba(0, 0, 0, 0.0151852)) drop-shadow(0px 38.5185px 25.4815px rgba(0, 0, 0, 0.0121481)) drop-shadow(0px 20px 13px rgba(0, 0, 0, 0.01)) drop-shadow(0px 8.14815px 6.51852px rgba(0, 0, 0, 0.00785185)) drop-shadow(0px 1.85185px 3.14815px rgba(0, 0, 0, 0.00481481));  
+    padding: 0;
+    transition: 0.2s linear;
+    border: none;
 }
+.destination__kard--img {
+    border-radius: 24px 24px 0 0;
+}    
 .destination__kard--wrapper:hover {
-    transform: scale(1.07); 
-    box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.2), 0px 64.8148px 46.8519px rgba(0, 0, 0, 0.02), 0px 38.5185px 25.4815px rgba(0, 0, 0, 0.2), 0px 20px 13px rgba(0, 0, 0, 0.2), 0px 8.14815px 6.51852px rgba(0, 0, 0, 0.02), 0px 1.85185px 3.14815px rgba(0, 0, 0, 0.02);  
+    transform: scale(1.07);    
+    box-shadow: 0px 100px 80px rgba(0, 0, 0, 0.2), 0px 64.8148px 46.8519px rgba(0, 0, 0, 0.02), 0px 38.5185px 25.4815px rgba(0, 0, 0, 0.2), 0px 20px 13px rgba(0, 0, 0, 0.2), 0px 8.14815px 6.51852px rgba(0, 0, 0, 0.02), 0px 1.85185px 3.14815px rgba(0, 0, 0, 0.02); 
 }
 .destination__kard--wrapper:hover .desitnations__kards--text p  {
    color: rgb(231, 41, 82);
@@ -461,7 +465,7 @@ h1 {
     font-family: "Poppins";  
     line-height: 124.5%;  
     color: rgb(94, 98, 130);
-    font-weight: 500;
+    font-weight: 500;  
 }
 .desitnations__kards--text p {   
     font-size: 1.125rem;  
@@ -484,7 +488,7 @@ h1 {
     left: 280px;
     z-index: 0;
 }
-.destination__kard--img:nth-child(1){
+.destination__kard--img:nth-child(1) {
     width: 100%;
 }
 /*trip*/
@@ -815,7 +819,7 @@ span + img {
 
 .subscribe {
     width: 100%;
-    height: 600px;
+    height: 500px;
     max-height: 1500px;
     position: relative;      
 }
@@ -891,7 +895,7 @@ input[type=email] {
     height: 8vh;
     color: rgba(255, 255, 255, 1);
     border-radius: 10px;
-    padding: 10px 25px;       
+    padding: 10px auto;       
     background: linear-gradient(180deg, rgb(255, 148, 109) 0%, rgb(255, 125, 104) 100%);      
     font-family: "Open Sans";
     font-style: bold;
@@ -935,33 +939,40 @@ input[type=email] {
 *:focus,
 *:active {
   outline: none !important; 
-}.footer {
+}
+.footer {
     width: 100%;
-    height: 400px;
+    height: 300px;
     max-height: 1000px;
     padding-right: 0;
     margin-right: 0;    
     display: flex;
     justify-content: space-evenly;   
-    padding: 10vh 8%;   
+    padding: 10vh 8% 0;   
     font-family: "Poppins";  
-    flex-wrap: wrap;  
+    flex-wrap: nowrap;  
     box-sizing: border-box;
     color: rgba(94, 98, 130, 1);
 } 
 .footer__col1 {    
-    width: 17vw;         
+    width: 220px;         
     font-weight: 500;
     font-size: 0.8125rem;    
     line-height: 125%;
     text-align: left;
     color: rgb(94, 98, 130);  
-    display: block;        
+    display: block;       
+     h6 {
+        font-size: 1.25rem;
+        line-height: 125%;   
+        padding-bottom: 4vh;
+    }
 }  
 .footer__logotip {
     width: 180px;  
     img {
-    padding-bottom: 6vh;; 
+    padding-bottom: 6vh;
+    width: 100%;
 } 
 } 
 .footer__col2 {
@@ -971,42 +982,34 @@ input[type=email] {
     line-height: 125%;
     text-align: left;
     color: rgb(8, 8, 9);  
-    display: block;      
-}  
-.footer__col2 a {       
+    display: block;    
+        a {       
     font-weight: 500;
     font-size: 1.125rem;    
     line-height: 125%;
     text-align: left;
     color: rgb(94, 98, 130);  
-    text-decoration: none;      
+    text-decoration: none; 
+         &:hover {       
+        font-weight: 800;    
+        color: rgb(107, 12, 12);        
+    }     
 }
-.footer__col2 a:hover {       
-    font-weight: 800;    
-    color: rgb(107, 12, 12);        
-}
+}      
 .footer__col3--socialIcon {
     display: flex;    
     transition: all 1s linear;
 }
-.footer__col1 h6 {
-    font-size: 1.25rem;
-    line-height: 125%;   
-    padding-bottom: 4vh;
-}
-.footer p:nth-last-child(1) {
-    font-size: 0.875rem;
-    padding-top: 7vh;
-}
+
 .footer__col3--socialIcon img:nth-child(1) {
     margin-right: .7vw;
 }
 .footer__play2 {
     border-radius: 20px;
     border: 0.1px solid rgba(0, 0, 0, 0);
-}
-.footer__play2:hover {    
+    &:hover {    
     box-shadow: 5px 5px 9px rgba(0, 0, 0, 0.9);   
+    }
 }
 .wrapperF {
   display: flex;
@@ -1089,9 +1092,17 @@ input[type=email] {
   background-color: rgb(225, 48, 108);
   color:  $fon_color;
 }
-
+.kopirait {
+    margin-top: 0;
+    font-size: 0.875rem;
+    padding-top: 0;
+    text-align: center;
+    font-family: "Poppins";     
+    margin-bottom: 30px; 
+    color: rgb(94, 98, 130);
+}
 /*adaptive*/
-@media screen and (max-width: 1100px) {
+@media screen and (max-width: 1150px) {
     video {
         width: 75%;
         margin-top: 2%;
@@ -1196,6 +1207,13 @@ input[type=email] {
     .subscribe__decor--bottom {
         width: 15%;
     }
+    .btn {
+        width: 20%;
+    }
+    input[type=email] {
+        width: 60%;
+        margin-left: 10%;
+    }
 }
 
 @media screen and (max-width: 900px) {
@@ -1254,44 +1272,40 @@ input[type=email] {
     .desitnations__kards--text span {
         padding-left: 40%;
     }
-    .subscribe {
-        padding-top: 2%;
-    }
-    .footer__col2 p {
-        font-size: 1rem;
-        padding-bottom: 4vh;
-    }
-    .footer__col2 a {
-        font-size: 0.8rem;
-        line-height: 100%;
-    }
-    .footer__col1 h6 {
-        font-size: 0.8rem;
-        line-height: 100%;
-        padding-bottom: 2vh;
-        text-align: center;
-    }
-    .footer__col1 p {
-        line-height: 155%;
-    }
-    .footer__col3--socialIcon {
-        display: block;
-    }
-    .footer__col1 img {
-        padding-bottom: 2vh;
-    }
-    .footer__play {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
     .trip__kard {
         width: 350px;
         height: 380px;
         margin-left: 2vw;
     }
-
+    .subscribe {
+        height: 430px;
+        padding-top: 2%;
+    }
+    .subscribe__decor--bottom {
+        width: 15%;
+    }
+    .subscribe__fon--notHidden {
+        height: 307px;
+    }
+    .subscribe__fon {
+        height: 307px;
+    }
+    .subscribe__fon h3 {
+        font-size: 1.2rem;
+        line-height: 109%;
+        padding: 10vh 5vw;
+    }
+    input[type=email] {
+        width: 60%;
+        margin-left: 10%;
+    }
+    .btn {
+        width: 19%;
+        font-size: 0.9rem;
+    }
+    .say {
+        height: 680px;
+    }
     .wrapperF .icon {
         background-color: $fon_color;
         box-shadow: none;
@@ -1317,37 +1331,43 @@ input[type=email] {
         font-size: 0.7rem;
         line-height: 125%;
     }
-    .footer__col1 .footer__logo {
-        width: 80%;
-        padding-bottom: 0;
+    .footer__col2 p {
+        font-size: 1rem;
+        padding-bottom: 4vh;
     }
-    .subscribe {
-        height: 430px;
+    .footer__col2 a {
+        font-size: 0.8rem;
+        line-height: 100%;
     }
-    .subscribe__decor--bottom {
-        width: 15%;
+    .footer__col1 h6 {
+        font-size: 0.8rem;
+        line-height: 100%;
+        padding-bottom: 2vh;
+        text-align: center;
     }
-    .subscribe__fon--notHidden {
-        height: 307px;
+    .footer__col1 p {
+        line-height: 155%;
     }
-    .subscribe__fon {
-        height: 307px;
+    .footer__col3--socialIcon {
+        display: block;
     }
-    .subscribe__fon h3 {
-        font-size: 1.2rem;
-        line-height: 109%;
-        padding: 10vh 5vw;
+    .footer__col1 img {
+        padding-bottom: 2vh;
     }
-    input[type=email] {
-        width: 65%;
-        margin-left: 10%;
+        
+    .footer__play {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
-    .custom-btn {
-        width: 19%;
-        font-size: 0.9rem;
+    .footer__logotip {
+        width: 100px;  
+        p{
+        padding-top: 40px;
+        }     
     }
-    .say {
-        height: 680px;
+    .footer__logo img:nth-child(1) {
+        width: 80%;       
     }
 }
 
@@ -1460,7 +1480,6 @@ input[type=email] {
         font-size: .775rem;
         line-height: 1.2rem;
     }
-
     .wrapper {
         width: 75%;
         height: 60%;
@@ -1526,8 +1545,11 @@ input[type=email] {
         height: 800px;
     }
     input[type=email] {
-        margin-left: 3%;
+        margin-left: 5%;
         padding-left: 15%;
+    }
+    .btn {
+        width: 25%;
     }
     .footer__hidden {
         display: none;
@@ -1561,10 +1583,6 @@ input[type=email] {
     .header__text2 span {
         font-size: 1.6rem;        
     }
-    .header__button--orang2 {
-        width: 20%;
-        margin-top: 2%;
-    }
     header {
         height: 550px;
         background-size: 65%;
@@ -1592,11 +1610,9 @@ input[type=email] {
     .say h2 {
         font-size: 1.7rem;
     }
-
     .services__image img {
         width: 20%;
     }
-
     .subscribe__decor--bottom {
         width: 20%;
     }
@@ -1727,9 +1743,9 @@ input[type=email] {
     .wrapper .controls {
         left: 35%;
     }
-    .custom-btn {
-        width: 23%;
-        font-size: 0.75rem;
+    .btn {
+        width: 27%;
+        font-size: 0.8rem;
     }
     .slaide__user {
         width: 320px;
@@ -1814,8 +1830,13 @@ input[type=email] {
     .trip {
         height: 890px;
     }
+    
     .subscribe {
         padding-top: 6%;
+    }
+    .btn {
+        width: 29%;
+        font-size: 0.65rem;
     }
 }
 
@@ -1925,20 +1946,19 @@ input[type=email] {
         padding: 11vh 5vw 8vh;
     }
     input[type=email] {
-        width: 65%;
+        width: 63%;
         margin-left: 2%;
         height: 5vh;
         font-size: .8rem;
         background-image: url(./img/email1.png);
         padding-left: 18%;
     }
+    .btn {
+        height: 5vh;
+        width: 25%;               
+    }
     .subscribe {
         height: 380px;
-    }
-    .custom-btn {
-        width: 19%;
-        font-size: 0.6rem;
-        height: 5vh;
     }
     .trip {
         height: 820px;
@@ -1949,7 +1969,6 @@ input[type=email] {
     .trip__kard {
         margin-top: 20px;
     }
-
     .services {
         height: 1650px;
     }
@@ -1957,7 +1976,6 @@ input[type=email] {
         height: 1520px;
     }
 }
-
 
 @media screen and (max-width: 413px) {
     h1 {
